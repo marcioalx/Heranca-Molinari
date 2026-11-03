@@ -1,9 +1,9 @@
-
 import 'carro.dart';
 import 'moto.dart';
+import 'tesla.dart';
+import 'lambreta.dart';
 
 void main() {
-  // Criando o carro
   Carro c1 = Carro();
 
   c1.modelo = 'Fusca';
@@ -38,4 +38,42 @@ void main() {
   print('Cor: ${m1.cor}');
   print('Velocidade: ${m1.veloAtual}');
   print('Cilindradas: ${m1.cilindradas}');
+
+  print('----------------------');
+
+  // Criando o Tesla
+  Tesla t1 = Tesla();
+
+  t1.modelo = 'Tesla';
+  t1.veloMax = 250;
+  t1.cor = 'Branco';
+  t1.quantidadePortas = 4;
+
+  t1.ligar();
+  t1.acelerar(100);
+
+  print('Carro: ${t1.modelo}');
+  print('Cor: ${t1.cor}');
+  print('Velocidade: ${t1.veloAtual}');
+  print('Bateria: ${t1.bateria}%');
+
+  print('----------------------');
+
+  // Criando a lambreta
+  Lambreta l1 = Lambreta();
+
+  l1.modelo = 'Motinha do Gugu';
+  l1.veloMax = 80;
+  l1.cor = 'Azul Bebê';
+  l1.cilindradas = 125;
+
+  l1.ligar();
+  l1.acelerar(30);
+  l1.empinar();
+  l1.passear();
+
+  print('Lambreta: ${l1.modelo}');
+  print('Cor: ${l1.cor}');
+  print('Velocidade: ${l1.veloAtual}');
+  print('Cilindradas: ${l1.cilindradas}');
 }
